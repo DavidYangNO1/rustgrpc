@@ -1,0 +1,25 @@
+[package]
+name = "rustgrpc"
+version = "0.1.0"
+authors = ["imac"]
+edition = "2018"
+
+[[bin]]
+name = "helloworld-server"
+path = "src/server.rs"
+
+[[bin]]
+name = "helloworld-client"
+path = "src/client.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tonic = "0.2"
+bytes = "0.5.4"
+prost = "0.6"
+prost-derive = "0.5"
+tokio = { version = "0.2.4", features = ["full"] }
+
+[build-dependencies]
+tonic-build = "0.2.0"
